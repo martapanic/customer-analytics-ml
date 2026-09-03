@@ -4,147 +4,59 @@ A collection of three applied customer analytics projects developed for the
 **AI for Communication and Marketing** course during my BSc in Artificial Intelligence
 at the University of Pavia.
 
-The projects explore different stages of the customer analytics lifecycle:
-**segmentation, churn prediction, and Customer Lifetime Value forecasting**.
+The projects explore three complementary areas of customer analytics:
 
-Each analysis combines data-driven modeling with the translation of results
-into actionable business and marketing strategies.
+1. **Customer Segmentation** — RFM analysis and K-Means clustering
+2. **Churn Prediction** — supervised machine learning for retention targeting
+3. **Customer Lifetime Value** — probabilistic models and ML-based revenue forecasting
 
----
+Each project combines quantitative analysis with business-oriented interpretation and marketing recommendations.
 
 ## Projects
 
-### 1. Customer Segmentation & Communication Strategy
+### 01 — Customer Segmentation & Communication Strategy
 
-Customer segmentation using both **RFM analysis** and **K-Means clustering**
-to identify high-value customer groups and design differentiated communication strategies.
+Customer segmentation using **RFM analysis and K-Means clustering** to identify high-value groups and behavioral personas.
 
-#### Methods
-- Data cleaning and exploratory data analysis
-- RFM customer segmentation
-- Feature scaling
-- K-Means clustering
-- Elbow method and Silhouette Score
-- PCA
-- Cluster profiling
-- Marketing strategy development
+Key techniques:
+RFM · K-Means · PCA · Silhouette Score · Customer Profiling
 
-#### Key Findings
-
-RFM analysis identified a strong concentration of value among top customer segments,
-while K-Means provided complementary behavioral personas.
-
-The **Premium Lifestyle** cluster, representing 23.8% of customers,
-generated 51.6% of total revenue.
-
-The results were translated into differentiated communication strategies,
-including premium retention, reactivation, conversion and low-cost nurturing campaigns.
+[View project](./01-customer-segmentation)
 
 ---
 
-### 2. Customer Churn Prediction
+### 02 — Customer Churn Prediction
 
-Supervised machine learning project designed to identify customers at risk of churn
-and prioritize retention efforts.
+Predictive modeling to identify customers at risk of churn and prioritize retention actions.
 
-#### Models
-- Logistic Regression
-- Random Forest
+Key techniques:
+Logistic Regression · Random Forest · ROC-AUC · Recall · Lift Analysis
 
-#### Evaluation
-Models were compared using:
-
-- Accuracy
-- Precision
-- Recall
-- F1-score
-- ROC-AUC
-- Confusion Matrix
-- Lift analysis
-
-#### Results
-
-The Random Forest model achieved:
-
-| Metric | Score |
-|---|---:|
-| Accuracy | 0.928 |
-| Precision | 0.745 |
-| Recall | **0.873** |
-| F1-score | 0.804 |
-| ROC-AUC | **0.976** |
-
-Recall was prioritized because failing to identify an actual churner was considered
-more costly than targeting an additional retained customer.
-
-Ranking customers by predicted churn probability showed that the **top 20% risk segment
-captures approximately 74% of churners**, enabling more efficient retention campaigns.
+[View project](./02-churn-prediction)
 
 ---
 
-### 3. Customer Lifetime Value Forecasting
+### 03 — Customer Lifetime Value Forecasting
 
-Customer value modeling and revenue forecasting using both
-**probabilistic BTYD models** and machine learning regression.
+Comparison of probabilistic BTYD models and machine learning for customer value estimation and revenue forecasting.
 
-#### Models
-- BG/NBD
-- Gamma-Gamma
-- Random Forest Regression
+Key techniques:
+BG/NBD · Gamma-Gamma · Random Forest Regression · CLTV
 
-#### Analysis
-- Transaction-level data preparation
-- RFM feature engineering
-- Calibration / holdout evaluation
-- Customer Lifetime Value estimation
-- Revenue forecasting
-- Customer segmentation using expected CLTV and probability of being alive
-
-#### Results
-
-For short-term revenue prediction, Random Forest achieved lower prediction error
-than the probabilistic BTYD approach.
-
-| Model | MAE | RMSE |
-|---|---:|---:|
-| BG/NBD + Gamma-Gamma | 1.90 | 15.22 |
-| Random Forest | **1.65** | **14.77** |
-
-The probabilistic model remains useful for interpreting customer behavior through
-metrics such as expected CLTV and `p(alive)`, while the machine learning model
-provided stronger short-term forecasting performance.
+[View project](./03-customer-lifetime-value)
 
 ---
 
 ## Tech Stack
 
-- Python
-- Pandas
-- NumPy
-- Scikit-learn
-- Lifetimes
-- Matplotlib
-- Seaborn
-- Jupyter Notebook
+Python · Pandas · NumPy · Scikit-learn · Lifetimes · Matplotlib · Seaborn · Jupyter
 
----
+## Course
 
-## Repository Structure
+**AI for Communication and Marketing**  
+BSc in Artificial Intelligence  
+University of Pavia — A.Y. 2025/2026
 
-```text
-customer-analytics-ml/
-│
-├── 01-customer-segmentation/
-│   ├── customer_segmentation.ipynb
-│   └── presentation.pdf
-│
-├── 02-churn-prediction/
-│   ├── churn_prediction.ipynb
-│   └── presentation.pdf
-│
-├── 03-customer-lifetime-value/
-│   ├── cltv_forecasting.ipynb
-│   └── presentation.pdf
-│
-├── requirements.txt
-└── README.md
+## Author
+
+**Marta Paniconi**
